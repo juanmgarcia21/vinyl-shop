@@ -1,13 +1,14 @@
 .topnav {
     overflow: hidden;
-    background-color: rgb(26, 24, 24);
+    background-color: #8a817c;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
-    display: list-item;
+    display: flex;
     padding: 25px;
+    justify-content: flex-end;
 }
 
 .topnav h1 {
@@ -24,11 +25,20 @@ li {
     display: block;
     color: white;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 50px;
     text-decoration: none;
     float: right;
 }
 
 li:hover {
-    background-color: rgb(126, 36, 138);
+    background-color: #e0afa0;
+}
+
+img {
+    margin-top: -20px;
+    width: 5%;
+}
+
+.bienvenida {
+    text-align: center;
 }
