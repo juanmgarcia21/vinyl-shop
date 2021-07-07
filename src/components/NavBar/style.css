@@ -1,44 +1,57 @@
 .topnav {
     overflow: hidden;
-    background-color: #8a817c;
-    text-align: center;
+    background-color: #197278;
 }
 
-nav ul {
+nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+
+}
+
+.vinilo {
+    padding-right: 20px;
+
+}
+
+.cart {
+    padding-left: 100px;
+    padding-right: 40px;
+}
+
+.topnav ul {
     list-style: none;
     display: flex;
-    padding: 25px;
-    justify-content: flex-end;
+    padding: 10px;
+    float: right;
+
+
 }
 
 .topnav h1 {
-    color: white;
+    display: inline-flex;
+    color: #edddd4;
     float: left;
-    padding-bottom: 30px;
-    padding-top: 28px;
-    padding-left: 70px;
+    padding-top: 20px;
+    padding-left: 50px;
     font-size: 30px;
     margin: 0px;
+
+
 }
 
+
 li {
-    display: block;
     color: white;
     text-align: center;
-    margin-right: 50px;
+    padding: 7px 16px;
     text-decoration: none;
-    float: right;
+    float: left;
+
 }
 
 li:hover {
-    background-color: #e0afa0;
-}
-
-img {
-    margin-top: -20px;
-    width: 5%;
-}
-
-.bienvenida {
-    text-align: center;
+    background-color: #111;
 }
