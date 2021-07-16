@@ -24,7 +24,6 @@ const Counter = ({ initial, stock, onAdd }) => {
             <span className="countAmount">{items}</span>
             <i className="countButton" onClick={addItems}> <MdAddCircle /></i>
          </div>
-         <button type="button" onClick={onAdd}>Agregar</button>
       </div>
    )
 }
