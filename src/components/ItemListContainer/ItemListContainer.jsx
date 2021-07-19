@@ -17,13 +17,14 @@ const ItemListContainer = (props) => {
         setTimeout(() => {
             if (catId) {
                 let filtro = productList.filter(
-                    (product) => product.categoria === catId
+                    (product) => product.categoria.includes(catId)
                 );
                 resolve(filtro);
             } else {
                 resolve(productList);
             }
-        }, 3000);
+        }, 2000);
+
     });
 
     useEffect(() => {

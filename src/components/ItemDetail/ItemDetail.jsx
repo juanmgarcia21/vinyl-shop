@@ -1,6 +1,6 @@
 import React from 'react'
 import Counter from '../ItemCount/ItemCount';
-
+import './ItemDetail.css';
 
 const onAdd = () => { }
 
@@ -9,7 +9,7 @@ const ItemDetail = ({ producto }) => {
 
 
         <div className="container">
-            <img src={'/' + producto.img} className="imga" />
+            <img src={producto.img} alt="fotos" />
             <div className="card">
                 <h5>{producto.title}</h5>
                 <p>${producto.price}</p>

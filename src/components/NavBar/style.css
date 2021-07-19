@@ -44,7 +44,7 @@ nav {
 
 .categoria-item {
 
-    color: white;
+    color: #edddd4;
     text-align: center;
     padding: 7px 16px;
     text-decoration: none;
@@ -52,14 +52,6 @@ nav {
 
 }
 
-.categorias {
-    color: white;
-    text-align: center;
-    padding: 7px 16px;
-    text-decoration: none;
-    float: left;
-
-}
 
 .categoria-item:hover {
     background-color: #111;

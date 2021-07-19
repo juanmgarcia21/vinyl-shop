@@ -1,6 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .countButton {
@@ -15,6 +16,6 @@
 .countAmount {
 
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 
 }
