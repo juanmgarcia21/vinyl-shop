@@ -1,4 +1,5 @@
-E-copmmerce
+##E-copmmerce
+
 Proyecto para el curso de ReactJS de la academia CoderHouse. En esta entrega nos encontramos con un Navbar con cart, catalogo y detalle de productos. Podemos acceder a cada producto con su respectivo cart. Se utilizó estilos de CSS. Además se importaron íconos de https://react-icons.github.io/react-icons
 
 ## Available Scripts
