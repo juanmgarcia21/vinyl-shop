@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Item = ({ product }) => {
 
     return (
+
         <Link to={`/item/${product.id}`}>
 
             <div className="contenedor">

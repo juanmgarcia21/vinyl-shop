@@ -2,21 +2,34 @@ import { useState, useEffect } from 'react'
 import './ItemListContainer.css';
 import productList from "../Productos/productList";
 import ItemList from '../ItemList/ItemList';
-
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = (props) => {
+
     const [products, setProducts] = useState([]);
 
+    //uso useParmas para traer los parametros de la url y
+    //obtengo la categoria por params
+    const { catId } = useParams();
+
+    //promesa para traer los items
     const myPromise = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(productList), 3000);
+        setTimeout(() => {
+            if (catId) {
+                let filtro = productList.filter(
+                    (product) => product.categoria === catId
+                );
+                resolve(filtro);
+            } else {
+                resolve(productList);
+            }
+        }, 3000);
     });
-
-
 
     useEffect(() => {
         myPromise.then((resolve) =>
             setProducts(resolve));
-    }, [])
+    }, [catId, productList]);
 
 
     return (

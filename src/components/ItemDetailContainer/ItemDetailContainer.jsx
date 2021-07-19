@@ -10,8 +10,8 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
     const [producto, setProducto] = useState([]);
 
-    const traerProducto = (idParams) => {
-        const buscarProducto = allProducts.find((item) => item.id === parseInt(idParams));
+    const traerProducto = (id) => {
+        const buscarProducto = allProducts.find((item) => item.id === parseInt(id));
         setProducto(buscarProducto);
     };
 

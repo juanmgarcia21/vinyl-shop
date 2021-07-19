@@ -8,15 +8,18 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 function App() {
 
   return (
+
     <BrowserRouter>
       <Navbar />
       <Switch>
         <div>
           <Route exact path="/" component={ItemListContainer} />
+          <Route path="/categoria/:catId" component={ItemListContainer} />
           <Route path="/item/:id" component={ItemDetailContainer} />
         </div>
       </Switch>
     </BrowserRouter>
+
   );
 }
 
