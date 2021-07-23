@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+
 import './ItemCount.css';
 import { MdAddCircle, MdRemoveCircle } from "react-icons/md";
 
 
-const Counter = ({ initial, stock, onAdd }) => {
-
-   const [items, setItems] = useState(1)
+const Counter = ({ initial, stock, items, setItems }) => {
 
    const addItems = () => {
       items <= (stock - 1) &&

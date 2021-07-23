@@ -6,7 +6,7 @@ import productList from '../Productos/productList';
 const ItemDetailContainer = () => {
 
 
-    const [allProducts, setAllProducts] = useState(productList);
+    const [allProducts] = useState(productList);
     const { id } = useParams();
     const [producto, setProducto] = useState([]);
 
