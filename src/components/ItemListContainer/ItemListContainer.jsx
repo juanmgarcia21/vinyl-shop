@@ -3,6 +3,7 @@ import './ItemListContainer.css';
 import productList from "../Productos/productList";
 import ItemList from '../ItemList/ItemList';
 import { useParams } from "react-router-dom";
+import Spinner from '../Spinner/Spinner';
 
 const ItemListContainer = (props) => {
 
@@ -34,10 +35,14 @@ const ItemListContainer = (props) => {
 
 
     return (
-        <div className="bienvenida">
-            <h2>{props.saludo}</h2>
-            <ItemList products={products} />
-        </div>
+        <>
+            <div className="bienvenida">
+                <h2>{props.saludo}</h2>
+                <ItemList products={products} />
+
+            </div>
+            <Spinner />
+        </>
     );
 };
 

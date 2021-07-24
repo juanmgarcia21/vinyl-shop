@@ -3,14 +3,14 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/NavBar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import DataProvider from './components/CartContext/CartContext';
+import { CartProvider } from './components/CartContext/CartContext';
 
 
 
 function App() {
 
   return (
-    <DataProvider>
+    <CartProvider>
       <BrowserRouter>
         <Navbar />
         <Switch>
@@ -21,7 +21,7 @@ function App() {
           </div>
         </Switch>
       </BrowserRouter>
-    </DataProvider>
+    </CartProvider>
   );
 }
 

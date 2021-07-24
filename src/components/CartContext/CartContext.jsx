@@ -1,40 +1,36 @@
 import React, { createContext, useState } from "react";
 
-export const Context = createContext();
-export const DataProvider = ({ children }) => {
+export const CartContext = createContext();
+export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([])
 
-    const isntInCart = (receivedItem) => cart.filter(producto => producto.id === receivedItem.id).lenght === 0;
+    //funciones
+    const isntInCart = (receivedItem) => cart.filter(product => product.id === receivedItem.id).length === 0;
+
 
     const agregarProducto = (receivedItem) => {
         if (isntInCart(receivedItem)) {
             setCart([...cart, receivedItem]);
         } else {
-            alert("ya esta en el carro");
+            alert('Este producto ya esta en el carrito');
         }
-
     }
 
     const eliminarProducto = (receivedItem) => {
-
-        let allItemsExceptRemoved = cart.filter(producto => producto.id !== receivedItem.id);
+        let allItemsExceptRemoved = cart.filter(product => product.id !== receivedItem.id);
         setCart(allItemsExceptRemoved);
     }
 
-    const clearCart = () => setCart([]);
+        ;
 
-
-
-
-    return <Context.Provider value={{ agregarProducto, eliminarProducto, clearCart, isntInCart }}>
+    return <CartContext.Provider value={{ isntInCart, agregarProducto, eliminarProducto }}>
         {children}
-    </Context.Provider>;
+    </CartContext.Provider>;
 };
 
 
 
-export default DataProvider;
 
 
 
