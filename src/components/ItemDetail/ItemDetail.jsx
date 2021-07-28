@@ -40,7 +40,7 @@ const ItemDetail = ({ producto }) => {
 
                 ) : (
                     <>
-                        <Link to="/cart" onClick={handleState}>
+                        <Link to="/Cart" onClick={handleState}>
                             <button onClick={handleState}>Terminar compra</button>
                         </Link>
                         <button onClick={() => {
