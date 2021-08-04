@@ -3,29 +3,29 @@ import './style.css';
 import CartWidget from '../CartWidget/CartWidget';
 import { FaRecordVinyl } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import categoria from '../Productos/categorias';
-
 
 const Navbar = (props) => {
 
     return (
 
         <nav className="topnav">
-            <Link to="/" ><h1><FaRecordVinyl className="vinilo" color="#283d3b" size="1.5em" />Vinyl Store</h1></Link>
+            <Link exact to="/" >
+                <h1><FaRecordVinyl className="vinilo" color="#283d3b" size="1.5em" />Vinyl Store</h1></Link>
             <ul>
-                {categoria.map((cat) => (
-                    <Link to={`/categoria/${cat.id}`}
-                        key={cat.id}
-                        className="categoria-item">
-                        {cat.title}
-                    </Link>
-                ))}
-                <CartWidget />
-
+                <Link to={`/categoria/POP`} className="categoria-item">
+                    <li>Pop</li>
+                </Link>
+                <Link to={`/categoria/ROCK`} className="categoria-item">
+                    <li>Rock</li>
+                </Link>
+                <Link to={`/categoria/OFERTAS`} className="categoria-item">
+                    <li>Ofertas</li>
+                </Link>
+                <Link to="/cart" className="carro">
+                    <CartWidget />
+                </Link>
             </ul>
-
-        </nav>
-
+        </nav >
     )
 };
 

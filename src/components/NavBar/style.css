@@ -11,15 +11,6 @@ nav {
 
 }
 
-.vinilo {
-    padding-right: 20px;
-
-}
-
-.cart {
-    padding-left: 100px;
-    padding-right: 40px;
-}
 
 .topnav ul {
     list-style: none;
@@ -27,8 +18,6 @@ nav {
     padding: 10px;
     float: right;
     align-items: center;
-
-
 }
 
 .topnav h1 {
@@ -56,4 +45,9 @@ nav {
 
 .categoria-item:hover {
     background-color: #111;
+}
+
+.carro {
+    padding: 7px 16px;
+    float: left;
 }
