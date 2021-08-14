@@ -29,6 +29,7 @@ const ItemDetail = ({ producto }) => {
             <div className="card">
                 <h5>{producto.title}</h5>
                 <p>${producto.price}</p>
+
                 {!finished ? (
                     <>
                         <Counter initial={1} items={items} setItems={setItems} stock={producto.stock} />

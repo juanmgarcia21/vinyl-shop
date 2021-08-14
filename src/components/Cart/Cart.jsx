@@ -1,18 +1,90 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
 import './Cart.css';
+import firebase from "firebase/app";
+import { database } from '../../firebase/firebase';
 
 const Cart = () => {
 
+    const [user, setUser] = useState({
+        name: "",
+        phone: "",
+        email: "",
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
     const { cart, eliminarProducto, totalCart, clearCart } = useContext(CartContext)
+
+    const totalFinal = cart.reduce((prev, cur) => {
+        return prev + (cur.quantity * cur.price)
+    }, 0)
+
+    const handleUser = (e) => {
+        setUser((user) => ({ ...user, [e.target.name]: e.target.value }));
+    };
+
+    const finalizarCompra = () => {
+        let newOrder = {
+            buyer: { data: user },
+            items: [...cart],
+            total: totalFinal,
+            date: new Date().toString(),
+        }
+
+        const orders = database.collection("orders");
+        let orderId
+        orders.add(newOrder)
+            .then((response) => {
+                orderId = response.id;
+            })
+
+
+        cart.forEach((element) => {
+            database.collection("productos")
+                .doc(element.orderId)
+                .update({ stock: element.stock - element.quantity });
+        });
+
+        const itemsToCheck = database.collection("productos").where(
+            firebase.firestore.FieldPath.documentId(),
+            "in",
+            cart.map((item) => item.id)
+        );
+
+        itemsToCheck.get().then((query) => {
+            const batch = database.batch();
+            const outOfStockItems = [];
+            query.docs.forEach((doc, index) => {
+                if (doc.data().stock >= newOrder.items[index].quantity) {
+                    batch.update(doc.ref, {
+                        stock: doc.data().stock - newOrder.items[index].quantity,
+                    });
+                } else {
+                    outOfStockItems.push({ ...doc.data(), id: doc.id });
+                }
+            });
+            if (outOfStockItems.length === 0) {
+                batch.commit().then(() => {
+                    alert("Gracias por tu compra! \n ID: " + orderId);
+                    clearCart();
+                });
+            } else {
+                alert("ERROR: Hay items que ya no tienen stock suficiente.");
+            }
+        });
+    }
 
 
     return (
         <div className="contenedor-total">
             {
                 !cart.length ?
-                    <h4 className="cart">No hay Items en el carrito <Link to='/'><button className="volver"> Volver</button> </Link> </h4>
+                    <h4 className="cart">No hay Items en el carrito <Link to='/'>
+                        <button className="volver"> Volver</button> </Link> </h4>
                     : (<>
                         {cart.map(cartItem => (
                             <div className="card1" key={cartItem.id} >
@@ -21,11 +93,47 @@ const Cart = () => {
                                 <div> Titulo:  {cartItem.title}  </div>
                                 <div> Cantidad: {cartItem.quantity}</div>
                                 <div> Total: ${cartItem.price * cartItem.quantity}</div>
+                                <div> Stock disponible: {cartItem.stock - cartItem.quantity}</div>
+
                                 <button onClick={() => { eliminarProducto(cartItem) }}>Borrar</button>
                             </div>)
                         )}
+                        <div>
+                            <form onSubmit={handleSubmit}>
+                                <label>Nombre:</label>
+                                <input
+                                    placeholder="Ingrese su nombre"
+                                    type="text"
+                                    value={user.name}
+                                    required
+                                    name="name"
+                                    onChange={handleUser}
+                                />
+                                <label>Telefono:</label>
+                                <input
+                                    placeholder="Ingrese su telefono"
+                                    type="text"
+                                    value={user.phone}
+                                    required
+                                    name="phone"
+                                    onChange={handleUser}
+                                />
+                                <label>Email:</label>
+                                <input
+                                    type="email"
+                                    placeholder="Ingrese su mail"
+                                    value={user.email}
+                                    required
+                                    name="email"
+                                    onChange={handleUser}
+                                />
+                            </form>
+
+                        </div>
                         <div className="borrarTodo">Total:${totalCart()}
-                            <button onClick={clearCart}>Borrar todo</button></div>
+                            <button onClick={clearCart}>Vaciar Carrito</button>
+                            <button onClick={() => { finalizarCompra() }}>Generar orden</button>
+                        </div>
                     </>
                     )
             }

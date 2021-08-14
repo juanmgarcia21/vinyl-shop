@@ -14,25 +14,35 @@ const ItemListContainer = (props) => {
     useEffect(() => {
         setLoading(true);
         const itemCollection = database.collection("productos");
-        const filtrado = itemCollection
+        if (categoria) {
+            const parsear = parseInt(categoria)
+            itemCollection.where("categoriaId", "==", parsear).get().then((snapshot) => {
+                if (snapshot.size > 0) {
+                    setProducts(
+                        snapshot.docs.map((doc) => {
+                            return { id: doc.id, ...doc.data() };
+                        })
+                    );
+                }
+            });
+        } else {
+            itemCollection.get().then((snapshot) => {
+                if (snapshot.size > 0) {
+                    setProducts(
+                        snapshot.docs.map((doc) => {
+                            return { id: doc.id, ...doc.data() };
+                        })
+                    );
+                }
+            });
+        }
 
-
-        const filtro = filtrado.get();
-        filtro.then((snapshot) => {
-            if (snapshot.size > 0) {
-                setProducts(
-                    snapshot.docs.map((doc) => {
-                        return { id: doc.id, ...doc.data() };
-                    })
-                );
-            }
-        });
-    }, []);
+    }, [categoria]);
 
     return (
         <>
             <div className="bienvenida">
-                <h2 className="titulo">{categoria}</h2>
+                <p className="titulo"></p>
                 <ItemList products={products} />
 
             </div>

@@ -12,13 +12,13 @@ const Navbar = (props) => {
             <Link exact to="/" >
                 <h1><FaRecordVinyl className="vinilo" color="#283d3b" size="1.5em" />Vinyl Store</h1></Link>
             <ul>
-                <Link to={`/categoria/POP`} className="categoria-item">
+                <Link to={`/categoria/1`} className="categoria-item">
                     <li>Pop</li>
                 </Link>
-                <Link to={`/categoria/ROCK`} className="categoria-item">
+                <Link to={`/categoria/2`} className="categoria-item">
                     <li>Rock</li>
                 </Link>
-                <Link to={`/categoria/OFERTAS`} className="categoria-item">
+                <Link to={`/categoria/3`} className="categoria-item">
                     <li>Ofertas</li>
                 </Link>
                 <Link to="/cart" className="carro">
