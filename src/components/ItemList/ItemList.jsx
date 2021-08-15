@@ -2,6 +2,7 @@ import React from 'react'
 import Item from '../Item/Item';
 import "./ItemList.css";
 
+
 const ItemList = ({ products }) => {
     return (
         <div className="list">
@@ -9,6 +10,8 @@ const ItemList = ({ products }) => {
                 return <Item key={product.id} product={product} />;
             })}
         </div>
+
+
     );
 };
 

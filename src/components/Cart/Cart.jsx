@@ -4,6 +4,7 @@ import { CartContext } from "../CartContext/CartContext";
 import './Cart.css';
 import firebase from "firebase/app";
 import { database } from '../../firebase/firebase';
+import swal from "sweetalert";
 
 const Cart = () => {
 
@@ -69,11 +70,22 @@ const Cart = () => {
             });
             if (outOfStockItems.length === 0) {
                 batch.commit().then(() => {
-                    alert("Gracias por tu compra! \n ID: " + orderId);
+                    swal({
+                        title: "Compra realizada con éxito! ",
+                        icon: "success",
+                        button: "Aceptar",
+                        text: "Este es tu numero de orden: " + orderId,
+                    });
+
                     clearCart();
                 });
+
             } else {
-                alert("ERROR: Hay items que ya no tienen stock suficiente.");
+                swal({
+                    title: "ERROR Hay items que sin stock.",
+                    icon: "error",
+                    timer: "2000"
+                });
             }
         });
     }

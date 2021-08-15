@@ -3,6 +3,7 @@ import Counter from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
+import swal from "sweetalert";
 
 
 const ItemDetail = ({ producto }) => {
@@ -35,8 +36,13 @@ const ItemDetail = ({ producto }) => {
                         <Counter initial={1} items={items} setItems={setItems} stock={producto.stock} />
                         <button onClick={() => {
                             handleState();
-                            handleSend();
-                        }}>Comprar</button>
+                            handleSend(); swal({
+                                title: "Producto agregado",
+                                icon: "success",
+                                timer: "1500"
+                            });
+                        }}>Agregar al carrito </button>
+
                     </>
 
                 ) : (
