@@ -3,6 +3,7 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from "react-router";
 import { database } from '../../firebase/firebase';
 
+
 const getItems = (id) => {
     const itemsCollection = database.collection("productos");
     const item = itemsCollection.doc(id);

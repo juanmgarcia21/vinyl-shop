@@ -6,6 +6,8 @@ import { CartContext } from "../CartContext/CartContext";
 import swal from "sweetalert";
 
 
+
+
 const ItemDetail = ({ producto }) => {
 
     const [items, setItems] = useState(1)
@@ -31,10 +33,15 @@ const ItemDetail = ({ producto }) => {
                 <h5>{producto.title}</h5>
                 <p>${producto.price}</p>
 
+
                 {!finished ? (
+
                     <>
                         <Counter initial={1} items={items} setItems={setItems} stock={producto.stock} />
-                        <button onClick={() => {
+                        <p className="card-text">
+                            En Stock: {producto.stock ? producto.stock : "No hay stock"}
+                        </p>
+                        <button className="button" onClick={() => {
                             handleState();
                             handleSend(); swal({
                                 title: "Producto agregado",
@@ -48,13 +55,14 @@ const ItemDetail = ({ producto }) => {
                 ) : (
                     <>
                         <Link to="/Cart" onClick={handleState}>
-                            <button onClick={handleState}>Terminar compra</button>
+                            <button className="button" onClick={handleState}>Terminar compra</button>
                         </Link>
-                        <button onClick={() => {
+                        <button className="button" onClick={() => {
                             handleState();
                             handleRemove();
-                        }}>Eliminar</button>
+                        }}>Modificar</button>
                     </>
+
                 )}
             </div>
         </div >

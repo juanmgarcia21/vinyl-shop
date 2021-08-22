@@ -98,6 +98,7 @@ const Cart = () => {
                     <h4 className="cart">No hay Items en el carrito <Link to='/'>
                         <button className="volver"> Volver</button> </Link> </h4>
                     : (<>
+                        <h3>Resumen de la compra</h3>
                         {cart.map(cartItem => (
                             <div className="card1" key={cartItem.id} >
                                 <img className="foto" src={cartItem.img}
@@ -107,7 +108,7 @@ const Cart = () => {
                                 <div> Total: ${cartItem.price * cartItem.quantity}</div>
                                 <div> Stock disponible: {cartItem.stock - cartItem.quantity}</div>
 
-                                <button onClick={() => { eliminarProducto(cartItem) }}>Borrar</button>
+                                <button className="button1" onClick={() => { eliminarProducto(cartItem) }}>Borrar</button>
                             </div>)
                         )}
                         <div>
@@ -143,8 +144,8 @@ const Cart = () => {
 
                         </div>
                         <div className="borrarTodo">Total:${totalCart()}
-                            <button onClick={clearCart}>Vaciar Carrito</button>
-                            <button onClick={() => { finalizarCompra() }}>Generar orden</button>
+                            <button className="button2" onClick={clearCart}>Vaciar Carrito</button>
+                            <button className="button2" onClick={() => { finalizarCompra() }}>Generar orden</button>
                         </div>
                     </>
                     )

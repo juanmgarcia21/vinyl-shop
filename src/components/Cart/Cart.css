@@ -1,12 +1,16 @@
 .contenedor-total {
     margin: 10px auto;
-    background-color: #E7F6F6;
-    border-radius: 30px;
+    width: 30%;
 }
 
-.contenedor-total {
-    margin: 10px auto;
-    width: 30%;
+.contenedor {
+    float: left;
+
+
+}
+
+h3 {
+    text-align: center;
 }
 
 .cart {
@@ -18,26 +22,20 @@
 
 .card1 {
     padding: 30px;
+    font-size: 13px;
 
 }
 
 .borrarTodo {
-    padding: 80px;
+    padding: 50px;
     display: flex;
     align-items: center;
+    font-size: 15px;
+    font-weight: bolder;
 
 }
 
-.volver {
-    background-color: #4CAF50;
-    /* Green */
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
 
-}
 
 .volver:hover {
     background-color: #3e8e41
@@ -52,4 +50,40 @@
 .foto {
     width: 50px;
     height: 50px;
+}
+
+
+
+form {
+    width: 300px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgb(159, 241, 214);
+}
+
+form label {
+    width: 72px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 180px;
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+.button2 {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+
 }

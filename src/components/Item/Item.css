@@ -8,8 +8,17 @@
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
     padding: 3px;
+}
 
-
+.button {
+    background-color: rgb(85, 163, 137);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16spx;
 }
 
 A:link {

@@ -1,13 +1,10 @@
 import React, { createContext, useState } from "react";
 import swal from "sweetalert";
-
-
 export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([])
 
-    //funciones
     const isntInCart = (receivedItem) => cart.filter(product => product.id === receivedItem.id).length === 0;
 
 
