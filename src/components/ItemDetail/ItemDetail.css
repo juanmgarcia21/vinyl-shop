@@ -2,8 +2,6 @@
     margin-top: 50px;
 }
 
-
-
 .button {
     background-color: rgb(85, 163, 137);
     border: none;
@@ -16,4 +14,9 @@
     display: inline-block;
     font-size: 16spx;
     border-radius: 10px;
+}
+
+.card-text {
+    font-style: italic;
+    font-size: 12px;
 }

@@ -1,33 +1,57 @@
-## E-commerce
+# Vinyl Shop
 
-Proyecto para el curso de ReactJS de la academia CoderHouse. En esta entrega nos encontramos con un Navbar con cart, catalogo y detalle de productos. Podemos acceder a cada producto con su respectivo cart. Se utilizó estilos de CSS. Además se importaron íconos de https://react-icons.github.io/react-icons
+Proyecto para el curso de ReactJS de la academia CoderHouse mediante una App de React simulando un E-commerce (2021)
 
-## Available Scripts
+## Librerias usadas
 
-In the project directory, you can run:
+- React
+
+- Firebase
+
+  
+
+## Descargar y correr el proyecto
+
+Una vez clonado o descargado el proyecto, instalar dependencias:
+
+### `npm install`
+
+Correr el servidor:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Se abre una pestaña del navegador en el puerto 3000:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Sino copiar esta URL y pegarla en el navegador: `http://localhost:3000`
 
 
 
 ## Estructura
 
-
-![image](https://user-images.githubusercontent.com/73263498/126237693-9641d5df-92d9-493c-a94a-b0aa37b95cc9.png)
+<img src="C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202635536.png" alt="image-20210823202635536" style="zoom:50%;" />
 
 
 ## ScreenShots
 
 
-![image](https://user-images.githubusercontent.com/73263498/126237768-a35cd458-ca68-4115-a56c-927e77bfc994.png)
+![image-20210823202709608](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202709608.png)
 
 
-![image](https://user-images.githubusercontent.com/73263498/126237812-d07f4fd7-c93a-49a2-8c59-21e1278b4494.png)
 
+
+
+
+![image-20210823202829784](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202829784.png)
+
+![image-20210823202856523](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202856523.png)
+
+
+
+## VIDEO
+
+Video de demostración del proceso de compra de la app.
+
+
+
+![Gif del prpyecto](<iframe src="https://giphy.com/embed/ta07DTnqSGOuMFQxa9" width="480" height="213" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 

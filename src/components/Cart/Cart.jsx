@@ -107,14 +107,13 @@ const Cart = () => {
                                 <div> Titulo:  {cartItem.title}  </div>
                                 <div> Cantidad: {cartItem.quantity}</div>
                                 <div> Total: ${cartItem.price * cartItem.quantity}</div>
-
                                 <button className="button1" onClick={() => { eliminarProducto(cartItem) }}><FaTrashAlt color="#197278" /></button>
                             </div>)
 
                         )}
                         <button className="button2" onClick={clearCart}>Vaciar Carrito</button>
                         <div className="total">Total:${totalCart()}</div>
-                        <div>
+                        <div className="card2">
                             <form onSubmit={handleSubmit}>
                                 <h2>Finalizar compra</h2>
                                 <label>Nombre:</label>
@@ -145,12 +144,9 @@ const Cart = () => {
                                     onChange={handleUser}
                                 />
                             </form>
-
+                            <button className="orden" onClick={() => { finalizarCompra() }}>Comprar</button>
                         </div>
-                        <div className="borrarTodo">
 
-                            <button className="button2" onClick={() => { finalizarCompra() }}>Generar orden</button>
-                        </div>
                     </>
                     )
             }

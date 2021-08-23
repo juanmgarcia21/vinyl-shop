@@ -37,20 +37,12 @@ h3 {
     text-align: center;
 }
 
-
-.borrarTodo {
-    padding: 50px;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    font-weight: bolder;
-
+.volver {
+    margin-left: 10px;
 }
 
-
-
 .volver:hover {
-    background-color: #3e8e41
+    background-color: #3e8e41;
 }
 
 .volver:active {
@@ -67,7 +59,7 @@ h3 {
 
 form {
     width: 300px;
-    padding: 16px;
+    padding: 16px 50px;
     border-radius: 10px;
     margin: auto;
     background-color: rgb(159, 241, 214);
@@ -97,15 +89,18 @@ form input[type="email"] {
     margin-left: 20px;
 }
 
+.card2 {
+    display: flex;
+    align-items: center;
+
+}
+
 .orden {
-    background-color: rgb(85, 163, 137);
+    background-color: black;
     border: none;
     color: white;
-
-    margin-left: 10px;
-    text-align: center;
+    margin-left: 30px;
+    padding: 10px 30px;
     text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 20px;
+    border-radius: 27px;
 }

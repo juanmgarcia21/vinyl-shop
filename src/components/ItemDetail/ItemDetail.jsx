@@ -35,7 +35,6 @@ const ItemDetail = ({ producto }) => {
 
 
                 {!finished ? (
-
                     <>
                         <Counter initial={1} items={items} setItems={setItems} stock={producto.stock} />
                         <p className="card-text">
