@@ -28,14 +28,16 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 ## Estructura
 
-<img src="C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202635536.png" alt="image-20210823202635536" style="zoom:50%;" />
+![image](https://user-images.githubusercontent.com/73263498/130534019-0545eaa4-b6cf-4721-a079-f1dab747a488.png)
 
 
 ## ScreenShots
 
+![image](https://user-images.githubusercontent.com/73263498/130533963-718bd9bb-cf87-4fdd-b3ff-4cdc08b3ae29.png)
 
-![image-20210823202709608](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202709608.png)
+![image](https://user-images.githubusercontent.com/73263498/130533904-e1dec53a-7218-4994-8032-5eb25025b056.png)
 
+<<<<<<< HEAD
 
 
 
@@ -44,6 +46,9 @@ Se abre una pestaña del navegador en el puerto 3000:
 ![image-20210823202829784](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202829784.png)
 
 ![[image-20210823202856523]()](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202856523.png)
+=======
+![image](https://user-images.githubusercontent.com/73263498/130533988-3d000aec-a9f4-4c19-9e3b-f5469355d44a.png)
+>>>>>>> 610ff996653393bc7c5e6bd97591da318c476720
 
 
 
@@ -51,5 +56,11 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 Video demonstración del proceso de compra de la app.
 
+<<<<<<< HEAD
 <div style="width:50%;height:0;padding-bottom:44%;position:relative;"><iframe src="https://giphy.com/embed/ta07DTnqSGOuMFQxa9" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ta07DTnqSGOuMFQxa9">via GIPHY</a></p>
+=======
+
+
+<div style="width:100%;height:0;padding-bottom:44%;position:relative;"><iframe src="https://giphy.com/embed/ta07DTnqSGOuMFQxa9" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ta07DTnqSGOuMFQxa9">via GIPHY</a></p>
+>>>>>>> 610ff996653393bc7c5e6bd97591da318c476720
 
