@@ -34,17 +34,7 @@ Se abre una pestaña del navegador en el puerto 3000:
 ## ScreenShots
 
 
-![image-20210823202709608](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202709608.png)
-
-
-
-
-
-
-![image-20210823202829784](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202829784.png)
-
-![image-20210823202856523](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202856523.png)
-
+![image](https://user-images.githubusercontent.com/73263498/130533904-e1dec53a-7218-4994-8032-5eb25025b056.png)
 
 
 ## VIDEO
