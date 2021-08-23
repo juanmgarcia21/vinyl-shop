@@ -28,13 +28,17 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 ## Estructura
 
-<img src="C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202635536.png" alt="image-20210823202635536" style="zoom:50%;" />
+![image](https://user-images.githubusercontent.com/73263498/130534019-0545eaa4-b6cf-4721-a079-f1dab747a488.png)
 
 
 ## ScreenShots
 
+![image](https://user-images.githubusercontent.com/73263498/130533963-718bd9bb-cf87-4fdd-b3ff-4cdc08b3ae29.png)
 
 ![image](https://user-images.githubusercontent.com/73263498/130533904-e1dec53a-7218-4994-8032-5eb25025b056.png)
+
+![image](https://user-images.githubusercontent.com/73263498/130533988-3d000aec-a9f4-4c19-9e3b-f5469355d44a.png)
+
 
 
 ## VIDEO
@@ -43,5 +47,5 @@ Video de demostración del proceso de compra de la app.
 
 
 
-![Gif del prpyecto](<iframe src="https://giphy.com/embed/ta07DTnqSGOuMFQxa9" width="480" height="213" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div style="width:100%;height:0;padding-bottom:44%;position:relative;"><iframe src="https://giphy.com/embed/ta07DTnqSGOuMFQxa9" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ta07DTnqSGOuMFQxa9">via GIPHY</a></p>
 
