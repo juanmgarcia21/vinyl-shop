@@ -17,7 +17,6 @@ const CartWidget = () => {
                 <>
                     <Badge badgeContent={quantityCart()} color="primary">
                         <Link to='/cart'><FaShoppingCart fontSize="large" color="black" size="30px" /></Link>
-
                     </Badge>
                 </>
             )}

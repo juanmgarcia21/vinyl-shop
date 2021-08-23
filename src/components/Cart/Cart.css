@@ -5,8 +5,13 @@
 
 .contenedor {
     float: left;
+}
 
-
+h2 {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0;
 }
 
 h3 {
@@ -23,8 +28,15 @@ h3 {
 .card1 {
     padding: 30px;
     font-size: 13px;
-
 }
+
+.total {
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
 
 .borrarTodo {
     padding: 50px;
@@ -51,7 +63,6 @@ h3 {
     width: 50px;
     height: 50px;
 }
-
 
 
 form {
@@ -84,6 +95,17 @@ form input[type="email"] {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+}
 
+.orden {
+    background-color: rgb(85, 163, 137);
+    border: none;
+    color: white;
 
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 20px;
 }

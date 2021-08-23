@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
 import './Cart.css';
+import { FaTrashAlt } from "react-icons/fa";
 import firebase from "firebase/app";
 import { database } from '../../firebase/firebase';
 import swal from "sweetalert";
@@ -106,13 +107,16 @@ const Cart = () => {
                                 <div> Titulo:  {cartItem.title}  </div>
                                 <div> Cantidad: {cartItem.quantity}</div>
                                 <div> Total: ${cartItem.price * cartItem.quantity}</div>
-                                <div> Stock disponible: {cartItem.stock - cartItem.quantity}</div>
 
-                                <button className="button1" onClick={() => { eliminarProducto(cartItem) }}>Borrar</button>
+                                <button className="button1" onClick={() => { eliminarProducto(cartItem) }}><FaTrashAlt color="#197278" /></button>
                             </div>)
+
                         )}
+                        <button className="button2" onClick={clearCart}>Vaciar Carrito</button>
+                        <div className="total">Total:${totalCart()}</div>
                         <div>
                             <form onSubmit={handleSubmit}>
+                                <h2>Finalizar compra</h2>
                                 <label>Nombre:</label>
                                 <input
                                     placeholder="Ingrese su nombre"
@@ -143,15 +147,15 @@ const Cart = () => {
                             </form>
 
                         </div>
-                        <div className="borrarTodo">Total:${totalCart()}
-                            <button className="button2" onClick={clearCart}>Vaciar Carrito</button>
+                        <div className="borrarTodo">
+
                             <button className="button2" onClick={() => { finalizarCompra() }}>Generar orden</button>
                         </div>
                     </>
                     )
             }
 
-        </div>
+        </div >
     )
 }
 
