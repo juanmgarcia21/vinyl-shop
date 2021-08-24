@@ -12,7 +12,7 @@ Proyecto para el curso de ReactJS de la academia CoderHouse mediante una App de 
 
 ## Descargar y clonar el proyecto
 
-### clone git https://github.com/juanmgarcia21/vinyl-shop
+### `clone git https://github.com/juanmgarcia21/vinyl-shop`
 
 Una vez clonado o descargado el proyecto, instalar dependencias:
 
