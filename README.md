@@ -52,5 +52,4 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 Video demonstración del proceso de compra de la app.
 
-
-<div style="width:50%;height:0;padding-bottom:44%;position:relative;"><iframe src="https://giphy.com/embed/ta07DTnqSGOuMFQxa9" width="50%" height="50%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ta07DTnqSGOuMFQxa9">via GIPHY</a></p>
+https://giphy.com/embed/ta07DTnqSGOuMFQxa9
