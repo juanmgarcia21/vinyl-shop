@@ -37,10 +37,6 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 ![image](https://user-images.githubusercontent.com/73263498/130533904-e1dec53a-7218-4994-8032-5eb25025b056.png)
 
-<<<<<<< HEAD
-
-
-
 
 
 ![image-20210823202829784](C:\Users\juanm\AppData\Roaming\Typora\typora-user-images\image-20210823202829784.png)
@@ -52,11 +48,9 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 
 
-
 ## VIDEO
 
 Video demonstración del proceso de compra de la app.
 
-<<<<<<< HEAD
-<div style="width:50%;height:0;padding-bottom:44%;position:relative;"><iframe src="https://giphy.com/embed/ta07DTnqSGOuMFQxa9" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ta07DTnqSGOuMFQxa9">via GIPHY</a></p>
 
+<div style="width:50%;height:0;padding-bottom:44%;position:relative;"><iframe src="https://giphy.com/embed/ta07DTnqSGOuMFQxa9" width="50%" height="50%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ta07DTnqSGOuMFQxa9">via GIPHY</a></p>
