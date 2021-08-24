@@ -47,5 +47,5 @@ Se abre una pestaña del navegador en el puerto 3000:
 
 Video demonstración del proceso de compra de la app.
 
+https://giphy.com/embed/vJ87HizSJcQgUWPlAg
 
-<iframe src="https://giphy.com/embed/vJ87HizSJcQgUWPlAg" width="480" height="213" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/vJ87HizSJcQgUWPlAg">via GIPHY</a></p>
